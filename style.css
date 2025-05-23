@@ -1,0 +1,13 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    padding: 20px;
+}
+
+#order-btn {
+    padding: 10px 20px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
