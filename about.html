@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Ресторан "Уют"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* Стили специфичные для страницы "О нас" */
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .about-hero {
+            background: url('../images/about-bg.jpg') center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-section {
+            margin-top: 4rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Уют</a>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="menu.html">Меню</a>
+                <a href="about.html" class="active">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="mobile-menu-btn">☰</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div>
+                <h1>Наша история</h1>
+                <p>С 2010 года создаем уютную атмосферу и вкусную еду</p>
+            </div>
+        </section>
+        
+        <div class="about-container">
+            <section class="about-content">
+                <div class="about-text">
+                    <h2>О нашем ресторане</h2>
+                    <p>Ресторан "Уют" был основан в 2010 году с целью создать место, где каждый гость чувствует себя как дома. Мы используем только свежие продукты от местных фермеров и уделяем внимание каждой детали.</p>
+                    <p>Наша кухня сочетает в себе традиционные рецепты и современные технологии приготовления. Шеф-повар с 15-летним опытом работы создает уникальные блюда, которые вы не попробуете больше нигде.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/restaurant-interior.jpg" alt="Интерьер ресторана">
+                </div>
+            </section>
+            
+            <section class="team-section">
+                <h2>Наша команда</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="images/team/chef.jpg" alt="Шеф-повар">
+                        <h3>Иван Петров</h3>
+                        <p>Шеф-повар</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team/manager.jpg" alt="Менеджер">
+                        <h3>Анна Смирнова</h3>
+                        <p>Менеджер</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team/bartender.jpg" alt="Бармен">
+                        <h3>Михаил Волков</h3>
+                        <p>Бармен</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>г. Москва, ул. Примерная, 15</p>
+                <p>+7 (999) 123-45-67</p>
+                <p>info@uyut-restaurant.ru</p>
+            </div>
+            <div class="footer-section">
+                <h3>Часы работы</h3>
+                <p>Пн-Чт: 12:00 - 23:00</p>
+                <p>Пт-Сб: 12:00 - 01:00</p>
+                <p>Вс: 12:00 - 22:00</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

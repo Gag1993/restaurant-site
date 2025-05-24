@@ -298,3 +298,20 @@ footer {
         justify-content: center;
     }
 }
+/* Анимации для страницы "О нас" */
+.team-member {
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.about-image img {
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.about-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
