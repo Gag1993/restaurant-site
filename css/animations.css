@@ -1,0 +1,300 @@
+/* Основные стили */
+:root {
+    --primary-color: #ff5722;
+    --secondary-color: #333;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: var(--light-bg);
+}
+
+/* Стики-шапка */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--white);
+    margin-left: 2rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Hero секция */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    margin-right: 1rem;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+/* Спецпредложения */
+.specials {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.special-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.special-card:hover {
+    transform: translateY(-10px);
+}
+
+.special-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+.special-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.special-info {
+    padding: 1.5rem;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.order-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #e64a19;
+}
+
+/* Форма бронирования */
+.reservation {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 5rem 2rem;
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.reservation-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #e64a19;
+}
+
+/* Футер */
+footer {
+    background: #222;
+    color: var(--white);
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links {
+        display: none; /* Будет показано через JS */
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+/* Анимация корзины */
+@keyframes cartBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.add-to-cart.added {
+    animation: cartBounce 0.5s;
+}
+
+/* Адаптивность меню */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-filters {
+        justify-content: center;
+    }
+}

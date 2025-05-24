@@ -3,26 +3,106 @@
 <head>
     <title>Ресторан "Уют"</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
+    <header class="sticky-header">
         <nav>
             <a href="index.html" class="logo">Уют</a>
             <div class="nav-links">
-                <a href="index.html">Главная</a>
+                <a href="index.html" class="active">Главная</a>
                 <a href="menu.html">Меню</a>
                 <a href="about.html">О нас</a>
                 <a href="contacts.html">Контакты</a>
             </div>
+            <div class="mobile-menu-btn">☰</div>
         </nav>
     </header>
 
     <main>
+        <!-- Hero секция с параллакс-эффектом -->
         <section class="hero">
-            <h1>Добро пожаловать в наш ресторан</h1>
-            <a href="menu.html" class="btn">Посмотреть меню</a>
+            <div class="hero-content">
+                <h1>Добро пожаловать в "Уют"</h1>
+                <p>Авторская кухня в сердце города</p>
+                <div class="hero-btns">
+                    <a href="menu.html" class="btn primary-btn">Посмотреть меню</a>
+                    <a href="#reservation" class="btn secondary-btn">Забронировать стол</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Спецпредложения -->
+        <section class="specials">
+            <h2 class="section-title">Наши спецпредложения</h2>
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-badge">Хит</div>
+                    <img src="images/special-1.jpg" alt="Стейк Рибай">
+                    <div class="special-info">
+                        <h3>Стейк Рибай</h3>
+                        <p>Мраморная говядина с трюфельным соусом</p>
+                        <div class="price">1 890 ₽ <span class="old-price">2 300 ₽</span></div>
+                        <button class="order-btn" data-item="Стейк Рибай">Заказать</button>
+                    </div>
+                </div>
+                <div class="special-card">
+                    <div class="special-badge">Новинка</div>
+                    <img src="images/special-2.jpg" alt="Морепродукты">
+                    <div class="special-info">
+                        <h3>Морепродукты</h3>
+                        <p>Микс из средиземноморских деликатесов</p>
+                        <div class="price">1 450 ₽</div>
+                        <button class="order-btn" data-item="Морепродукты">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок бронирования -->
+        <section id="reservation" class="reservation">
+            <div class="reservation-form">
+                <h2>Забронировать стол</h2>
+                <form>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Телефон" required>
+                    <input type="number" placeholder="Количество гостей" min="1">
+                    <input type="datetime-local">
+                    <button type="submit" class="submit-btn">Подтвердить</button>
+                </form>
+            </div>
         </section>
     </main>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>г. Москва, ул. Примерная, 15</p>
+                <p>+7 (999) 123-45-67</p>
+                <p>info@uyut-restaurant.ru</p>
+            </div>
+            <div class="footer-section">
+                <h3>Часы работы</h3>
+                <p>Пн-Чт: 12:00 - 23:00</p>
+                <p>Пт-Сб: 12:00 - 01:00</p>
+                <p>Вс: 12:00 - 22:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Ресторан "Уют". Все права защищены.</p>
+        </div>
+    </footer>
 
     <script src="js/app.js"></script>
 </body>
